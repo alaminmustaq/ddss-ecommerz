@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>DDSS Ecommerz</title>
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+    .swiper-carousel-one {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-carousel-one .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 600px;
+      height: 500px;
+    }
+
+    .swiper-carousel-one .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+
+    .swiper-carousel-one .swiper-slide-prev,
+    .swiper-carousel-one .swiper-slide-next {
+      background-color: #000;
+      opacity: 0.3;
+    }
+
+    .swiper-carousel-one .swiper-slide-active {
+      --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+      box-shadow: var(--tw-shadow);
+    }
+    /* 2nd slider */
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #ffffff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-carousel-two .swiper {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-carousel-two .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      height: calc((100% - 30px) / 2) !important;
+
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="shadow-2xl bg-white">
+      <div class="2xl:container 2xl:mx-auto">
+        <nav class="flex items-center gap-2 justify-between px-4 md:px-20 py-4">
+          <!-- logo -->
+           <div class="flex items-center gap-2">
+            <span class="lg:hidden hamburger cursor-pointer"><i class="fa-solid fa-bars"></i></span>
+            <a href="#">
+              <img src="public/img/Logo1.png" alt="logo" class="w-52 h-20 object-contain">
+             </a>
+           </div>
+           
+           <!-- navbar -->
+            <div class="hidden overlay bg-black bg-opacity-20 w-full h-full fixed top-0 left-0">
+            </div>
+              <ul class="z-50 navbar fixed lg:static bg-white min-w-[200px] lg:min-w-[auto] h-full top-0 left-0 -translate-x-full lg:translate-x-0 space-y-4 lg:space-y-0 px-4 py-2 lg:flex items-center gap-8 text-xl font-semibold text-gray-500 transition-transform duration-300">
+                <li><a href="#" class="text-blue-500 hover:text-blue-500">Home</a></li>
+                <li class="relative">
+                  <a href="#" class="hover:text-blue-500 py-2">Solution</a>
+                </li>
+                <li><a href="#" class="hover:text-blue-500">Pricing</a></li>
+                <li><a href="#" class="hover:text-blue-500">Services</a></li>
+                <li><a href="#" class="hover:text-blue-500">Demo</a></li>
+                <li><a href="#" class="hover:text-blue-500">Documentation</a></li>
+              </ul>
+            
+            <!-- Button -->
+            <a href="#" class="px-4 py-2 bg-blue-500 rounded-md text-white font-bold">Buy Now</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Main Banner -->
+    <section class="bg-[url('/public/img/main-banner.jpg')] bg-cover bg-center">
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="flex items-center justify-center  h-screen text-center text-white">
+          <div class="">
+            <h2 class="text-xl sm:text-3xl my-2">ULTIMATE PERFORMANCE</h2>
+            <h1 class="text-2xl sm:text-5xl font-bold my-2">Dynamic eCommerce Solutions</h1>
+            <h3 class="text-lg sm:text-xl my-4">Empowering your journey to eCommerce success.</h3>
+            <div class="flex flex-wrap items-center gap-6 justify-center my-6 font-semibold text-lg">
+              <a href="#" class="px-6 py-2.5 border-2 rounded-md hover:bg-gray-50 hover:text-[#3c4655] transition-colors duration-300">Browse Frontend</a>
+              <a href="#" class="px-6 py-2.5 border-2 rounded-md hover:bg-gray-50 hover:text-[#3c4655] transition-colors duration-300">Browse Admin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- about us -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="grid grid-cols-12 gap-2 px-4 md:px-20 py-10">
+          <div class="col-span-12 md:col-span-6 flex flex-col justify-center space-y-2 order-2 md:order-none">
+            <h2 class="text-xl">What is</h2>
+            <h3 class="text-4xl font-bold">DDSS Ecommerz</h3>
+            <p class="text-sm text-gray-500">DDSS Ecommerz is a dynamic and flexible single-vendor eCommerce platform, crafted to empower businesses with a comprehensive online presence. The platform integrates an easy-to-use admin panel, giving vendors full control over their storefront and operations. Customers enjoy a smooth and secure shopping experience thanks to the inclusion of multiple payment gateways, ensuring convenience and accessibility for diverse audiences. Additionally, the platform supports multiple SMS gateways for effective communication and notifications.</p>
+            <p class="text-sm text-gray-500">
+              A standout feature of DDSS Ecommerz is its custom language functionality, allowing businesses to localize their offerings and connect with a global audience. Designed for scalability, efficiency, and user-friendliness, DDSS Ecommerz is the perfect solution for businesses looking to succeed in the competitive world of eCommerce.</p>
+            <ul class="grid grid-cols-12 gap-4 w-full !mt-6">
+              <li class="col-span-12 sm:col-span-6 flex items-center gap-2">
+                <span class="flex-shrink-0 bg-blue-500 text-white w-12 h-12 text-2xl rounded-full flex items-center justify-center">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </span>
+                <div> 
+                  <h2 class="text-2xl font-medium">Secure</h2>
+                  <p class="text-lg text-gray-500">Transactions</p>
+                </div>
+              </li>
+              <li class="col-span-12 sm:col-span-6 flex items-center gap-2">
+                <span class="flex-shrink-0 bg-blue-500 text-white w-12 h-12 text-2xl rounded-full flex items-center justify-center">
+                  <i class="fa-solid fa-shield"></i>
+                </span>
+                <div> 
+                  <h2 class="text-2xl font-medium">Power Elite</h2>
+                  <p class="text-lg text-gray-500">Author on Codecanyon</p>
+                </div>
+              </li>
+              <li class="col-span-12 sm:col-span-6 flex items-center gap-2">
+                <span class="flex-shrink-0 bg-blue-500 text-white w-12 h-12 text-2xl rounded-full flex items-center justify-center">
+                  <i class="fa-solid fa-gears"></i>
+                </span>
+                <div> 
+                  <h2 class="text-2xl font-medium">Feature-Rich</h2>
+                  <p class="text-lg text-gray-500">Platform</p>
+                </div>
+              </li>
+              <li class="col-span-12 sm:col-span-6 flex items-center gap-2">
+                <span class="flex-shrink-0 bg-blue-500 text-white w-12 h-12 text-2xl rounded-full flex items-center justify-center">
+                  <i class="fa-solid fa-up-long"></i>
+                </span>
+                <div> 
+                  <h2 class="text-2xl font-medium">Lifetime</h2>
+                  <p class="text-lg text-gray-500">FREE Update</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-12 md:col-span-6 order-1 md:order-none">
+            <div >
+              <img src="public/img/about-us.png" alt="about" class="w-[600px]">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- Technology -->
+    <section class="bg-[url('/public/img/technology-bg.jpg')] bg-cover bg-no-repeat">
+      <div class="relative h-[600px]" style="background-size: 100% 600px;">
+        <div class="bg-gradient-to-r from-[#b43ab4] from-10% via-[#423ab4] via-30% to-[#3a50b4] to-90% opacity-80 w-full h-full absolute top-0 left-0"></div>
+        <div class="absolute top-0 left-0 text-white w-full h-full flex items-center gap-2 px-4 md:px-20 py-4">
+          <div class="space-y-20 w-full sm:w-[55%]">
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold">Technology Stack</h2>
+              <p class="text-sm text-gray-200">DDSS Ecommerz is built with modern and reliable technologies to ensure performance, scalability, and security.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-20">
+              <div class="w-fit">
+                <div class="flex items-center gap-10 md:gap-32">
+                  <span class="w-12 h-12 rounded-md flex items-center justify-center bg-[#3272ce] bg-opacity-50 border border-gray-200 text-2xl"><i class="fa-brands fa-laravel"></i></span>
+                  <span class="w-12 h-12 rounded-md flex items-center justify-center bg-[#3272ce] bg-opacity-50 border border-gray-200"><img src="public/img/mysql.png" alt="laravel" class="w-8 h-8"></span>
+                  <span class="w-12 h-12 rounded-md flex items-center justify-center bg-[#3272ce] bg-opacity-50 border border-gray-200 text-2xl"><i class="fa-brands fa-php"></i></span>
+                </div>
+                <div class="w-full h-10 px-4">
+                  <div class="relative w-full h-full border border-t-0 border-gray-200">
+                    <span class="absolute top-full left-1/2 -translate-x-1/2 text-xs text-gray-200"><i class="fa-solid fa-arrow-down"></i></span>
+                    <span class="absolute top-full left-1/2 -translate-x-1/2 translate-y-3 text-gray-200 text-lg font-medium">Technology</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="w-fit">
+                <div class="flex items-center gap-12">
+                  <span class="w-12 h-12 rounded-md flex items-center justify-center bg-[#7ea8da] border border-gray-200 text-2xl"><i class="fa-solid fa-globe"></i></span>
+                </div>
+                <div class="w-full h-10 px-4">
+                  <div class="relative w-[1px] mx-auto h-full border border-t-0 border-gray-200">
+                    <span class="absolute top-full left-1/2 -translate-x-1/2 text-xs text-gray-200"><i class="fa-solid fa-arrow-down"></i></span>
+                    <span class="absolute top-full left-1/2 -translate-x-1/2 translate-y-3 text-gray-200 text-lg font-medium">Platform</span>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        <div class="absolute top-1/2 right-32 -translate-y-1/2 hidden lg:block">
+          <img src="public/img/responsive-devices.png" alt="device-support" class="w-[300px] xl:w-[500px]">
+        </div>
+      </div>
+    </section>
+    <!-- Frontend Design -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-10">
+          <div class="text-center space-y-2">
+            <h2 class="font-bold text-4xl text-neutral-800">Frontend Design</h2>
+            <p class="text-gray-500 text-sm">Unique shop design to make your business Best eCommerce platform</p>
+          </div>
+          <!-- Carousel -->
+          <div>
+            <!-- Swiper -->
+            <div class="swiper swiper-carousel-one">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/home.png" alt="home" class="sm:w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/category.png" alt="category" class="sm:w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/all-product.png" alt="all-product" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/product-details.png" alt="product-details" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/coupon.png" alt="coupon" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/cart.png" alt="cart" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/checkout.png" alt="checkout" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/order-complete.png" alt="order-complete" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/dashboard.png" alt="dashboard" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/profile.png" alt="profile" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/order-list.png" alt="order-list" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/wishlist.png" alt="wishlist" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="public/img/frontend/track-details.png" alt="track-details" class="w-[600px] h-[500px] object-cover object-top"/>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Features -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-10">
+          <div class="text-center space-y-2">
+            <h2 class="font-bold text-4xl text-neutral-800">Core Features</h2>
+            <p class="text-gray-500 text-sm">Standard Multivendor system with well-decorated frontend & exclusive features.</p>
+          </div>
+          <div class="swiper swiper-carousel-two">
+            <div class="swiper-wrapper py-10">
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/responsive.png" alt="responsive" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">100% Responsive Design</p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/ecommerce.png" alt="ecommerce" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">One page Checkout</p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/world.png" alt="world" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Zone wise shipping cost
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/dashboard.png" alt="dashboard" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Simple customer dashboard
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/admin-dashboard.png" alt="admin-dashboard" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Business summary for the admin</p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/linguistics.png" alt="linguistics" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Multilanguage support
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/file.png" alt="file" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Convenient file upload system
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/shop.png" alt="shop" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Easy store setup</p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/heart.png" alt="heart" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Wish list</p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/promo-code.png" alt="promo-code" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Convenient coupon system
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/variant.png" alt="variant" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Variation product</p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/tools.png" alt="tools" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Easy installation procedures</p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/tracking.png" alt="tracking" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Courier tracking</p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/dynamic.png" alt="dynamic" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Dynamic page</p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/search.png" alt="search" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Search products
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/filters.png" alt="filters" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Filtering products
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/payment-method.png" alt="payment-method" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">International payment gateways
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/sms.png" alt="sms" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">SMS gateways
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col gap-2 ">
+                <span><img src="public/img/icons/account.png" alt="account" class="w-12 h-12"></span>
+                <p class="text-xs text-gray-500">Social login</p>
+              </div>
+              
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- highlighted features  -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-10 space-y-10">
+          <div class="text-center space-y-2">
+            <h2 class="font-bold text-4xl text-neutral-800">Easy Product Posting</h2>
+            <p class="text-gray-500 text-sm">An efficient and thoughtfully streamlined product posting option for admins and sellers makes it possible to provide an industry-leading standard.</p>
+          </div>
+  
+          <div class="grid grid-cols-12 gap-y-10 sm:gap-10">
+            <!-- card -->
+            <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-gray-100 px-4 py-8 rounded-xl text-lg shadow-md">
+              <div class="flex flex-col gap-4 items-center justify-center">
+                <span class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-4xl"><img src="public/img/icons/variant-white.png" alt="variant-white" class="w-10 h-10"></span>
+                <p class="text-gray-500 font-medium">Product Variant</p>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-gray-100 px-4 py-8 rounded-xl text-lg shadow-md">
+              <div class="flex flex-col gap-4 items-center justify-center">
+                <span class="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center text-4xl"><img src="public/img/icons/diamond.png" alt="diamond" class="w-12 h-12"></span>
+                <p class="text-gray-500 font-medium">Featured Product</p>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-gray-100 px-4 py-8 rounded-xl text-lg shadow-md">
+              <div class="flex flex-col gap-4 items-center justify-center">
+                <span class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-4xl"><i class="fa-solid fa-heart"></i></span>
+                <p class="text-gray-500 font-medium">Product Wishlist</p>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-gray-100 px-4 py-8 rounded-xl text-lg shadow-md">
+              <div class="flex flex-col gap-4 items-center justify-center">
+                <span class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-4xl"><img src="public/img/icons/ribbon-white.png" alt="ribbon-white" class="w-12 h-12"></span>
+                <p class="text-gray-500 font-medium">Highlighted Products</p>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-gray-100 px-4 py-8 rounded-xl text-lg shadow-md">
+              <div class="flex flex-col gap-4 items-center justify-center">
+                <span class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-4xl"><img src="public/img/icons/tag-white.png" alt="tag-white" class="w-12 h-12"></span>
+                <p class="text-gray-500 font-medium">Top Deal Products</p>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-gray-100 px-4 py-8 rounded-xl text-lg shadow-md">
+              <div class="flex flex-col gap-4 items-center justify-center">
+                <span class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-4xl"><img src="public/img/icons/banner-white.png" alt="banner-white" class="w-12 h-12"></span>
+                <p class="text-gray-500 font-medium">Multiple Banner</p>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-gray-100 px-4 py-8 rounded-xl text-lg shadow-md">
+              <div class="flex flex-col gap-4 items-center justify-center">
+                <span class="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-4xl"><img src="public/img/icons/discount-white.png" alt="discount-white" class="w-12 h-12"></span>
+                <p class="text-gray-500 font-medium">Discounted Product</p>
+              </div>
+            </div>
+            <!-- card -->
+            <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 bg-gray-100 px-4 py-8 rounded-xl text-lg shadow-md">
+              <div class="flex flex-col gap-4 items-center justify-center">
+                <span class="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center text-4xl"><img src="public/img/icons/free-shipping-white.png" alt="free-shipping-white" class="w-12 h-12"></span>
+                <p class="text-gray-500 font-medium">Free/Flat Shipping</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- Payment -->
+    <section class="bg-black">
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-20 grid grid-cols-12 gap-4">
+          <div class="col-span-12 xl:col-span-6 space-y-2 my-auto text-center xl:text-start">
+            <h2 class="font-bold text-4xl text-white">Multiple Payment Gateways</h2>
+            <p class="text-gray-400 text-sm">DDSS Ecommerz offers seamless and secure transactions through a wide range of payment gateways, ensuring convenience for both vendors and customers. We support six popular payment methods, including PayPal, SSLCOMMERZ, bKash, Nagad, MyFatoorah, and Stripe, making it easy to process payments locally and internationally.<br><br>
+              Our platform is continuously expanding, with even more payment gateway integrations coming soon, ensuring flexibility and choice for your customers. Whether you're selling products locally or globally, DDSS Ecommerz has you covered with trusted payment solutions.</p>
+          </div>
+          <div class="col-span-12 xl:col-span-6 flex items-center flex-col gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <!-- Payment Card -->
+                <div class="bg-blue-600 rounded-xl px-10 py-8 w-32 md:w-52 flex flex-wrap items-center justify-center">
+                  <img src="public/img/payment/paypal.png" alt="paypal">
+                </div>
+                <div class="bg-[#295cab] rounded-xl px-10 py-8 w-32 md:w-52 flex items-center justify-center">
+                  <img src="public/img/payment/sslcommerz.png" alt="paypal">
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <!-- Payment Card -->
+                <div class="bg-[#eeeeee] rounded-xl px-10 py-8 w-32 md:w-52 flex items-center justify-center">
+                  <img src="public/img/payment/nogode.png" alt="nogode">
+                </div>
+                <div class="bg-[#fdf4e2] rounded-xl px-10 py-8 w-32 md:w-52 flex items-center justify-center">
+                  <img src="public/img/payment/bkash.png" alt="bkash" class="w-20">
+                </div>
+                <div class="bg-[#f5f5f5] rounded-xl px-10 py-8 w-32 md:w-52 flex items-center justify-center">
+                  <img src="public/img/payment/myfatoorah.png" alt="myfatoorah">
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <!-- Payment Card -->
+                <div class="bg-[#6772e5] rounded-xl px-10 py-8 w-32 md:w-52 flex items-center justify-center">
+                  <img src="public/img/payment/stripe.png" alt="stripe">
+                </div>
+                <a href="#" class="border rounded-xl text-white px-4 py-5 md:py-14 w-44 md:w-72 flex items-center justify-center text-base sm:text-lg font-bold hover:border-black transition-colors">
+                  <span>Comming Soon More</span>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- admin pannel -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto px-4 md:px-20 py-10 grid grid-cols-12 gap-4">
+        <div class="col-span-12 lg:col-span-7 order-2 lg:order-none">
+          <img src="public/img/admin-pannel.png" alt="admin-pannel">
+        </div>
+        <div class="col-span-12 lg:col-span-5 space-y-2 my-auto text-center xl:text-start order-1 lg:order-none">
+          <h2 class="font-bold text-4xl">Stunning Admin Pannel Presentation</h2>
+          <p class="text-gray-500 text-sm">The DDSS Ecommerz admin panel is designed to give you full control over your online store with ease. Fully responsive and user-friendly, the admin panel lets you manage every aspect of your business—from product listings and order processing to customer management and analytics—right from one centralized dashboard.<br><br>
+            Whether you're on a desktop, tablet, or mobile device, the admin panel adapts seamlessly, ensuring you can efficiently run your store from anywhere, at any time. Experience intuitive navigation, real-time insights, and powerful tools to optimize your store’s performance effortlessly.</p>
+        </div>
+      </div>
+    </section>
+    <!-- tracking system -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-10 grid grid-cols-12 gap-4">
+        
+          <div class="col-span-12 lg:col-span-5 space-y-2 my-auto text-center xl:text-start order-1 lg:order-none">
+            <h2 class="font-bold text-4xl">Order tracking System</h2>
+            <p class="text-gray-500 text-sm">With DDSS Ecommerz, customers can easily track their orders using a unique order code. Our order tracking system provides real-time updates, allowing users to monitor the progress of their purchases from the moment an order is placed until it arrives at their doorstep. From processing to shipping and delivery, customers can stay informed about every step of the journey, ensuring transparency and peace of mind throughout the entire process.</p>
+          </div>
+          <div class="col-span-12 lg:col-span-7 order-2 lg:order-none">
+            <img src="public/img/tracking.png" alt="tracking">
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- More info -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-10 grid grid-cols-12 gap-x-4 gap-y-20 justify-items-center">
+          <div class="col-span-12 sm:col-span-6 text-center max-w-[400px]">
+            <h2 class="font-bold text-4xl">Laravel based PHP script</h2>
+            <p class="text-gray-500 text-sm">DDSS Ecommerz is powered by Laravel, a leading PHP framework known for its security, performance, and scalability. Built with a modern stack including Laravel, MySQL, Tailwind CSS, JavaScript, and jQuery, our platform offers a reliable and efficient eCommerce solution. This combination ensures smooth operation, a clean and responsive design, and robust backend functionality, making DDSS Ecommerz both developer-friendly and user-focused.</p>
+            <img src="public/img/technology-used.png" alt="technology-used" class="w-72 mx-auto">
+          </div>
+          <div class="col-span-12 sm:col-span-6 text-center max-w-[400px]">
+            <h2 class="font-bold text-4xl">Laravel based PHP script</h2>
+            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, omnis! Dolor nulla velit aut officiis iste quod obcaecati facilis pariatur fugit veniam! Modi adipisci id quis dolore fuga eveniet tenetur?</p>
+            <img src="public/img/technology-used.png" alt="technology-used" class="w-72 mx-auto">
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- responsive feature -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-10 space-y-10">
+          <div class="text-center space-y-2">
+            <h2 class="font-bold text-4xl text-neutral-800">Responsive Design</h2>
+            <p class="text-gray-500 text-sm sm:max-w-[500px] mx-auto">DDSS Ecommerz delivers a seamless experience across all devices. Whether on desktop, tablet, or smartphone, the platform adapts effortlessly, providing smooth navigation and a consistent look for both customers and admins. Your store is always accessible, no matter the device.</p>
+          </div>
+          <div>
+            <img src="public/img/responsive.png" alt="responsive" class="sm:max-w-[600px] mx-auto">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pricing -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-10 space-y-10 border-t border-dashed border-gray-400">
+          <div class="text-center space-y-2 sm:max-w-[500px] mx-auto">
+            <h2 class="font-bold text-4xl text-neutral-800">Affordable Pricing</h2>
+            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi qui officia eveniet voluptatum. Ipsa, commodi facere culpa mollitia sunt nobis.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-4 justify-center"> 
+            <!-- regular -->
+            <div class="w-fit px-12 py-4 border rounded-xl">
+              <div class="py-4">
+                <h2 class="text-lg text-gray-500">Regular License</h2>
+                <span class="text-2xl font-bold">$52</span>
+              </div>
+              <ul class="border-y py-4 space-y-6">
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-red-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-red-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-red-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+              </ul>
+              <a href="#" class="px-6 py-4 rounded-xl border inline-block w-full text-center my-4 font-semibold hover:bg-gray-900 transition-colors duration-300 hover:text-white">Buy Regular License</a>
+            </div>
+            <!-- extanded -->
+            <div class="w-fit px-12 py-4 border rounded-xl">
+              <div class="py-4">
+                <h2 class="text-lg text-gray-500">Extended License</h2>
+                <span class="text-2xl font-bold">$522</span>
+              </div>
+              <ul class="border-y py-4 space-y-6">
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-green-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-red-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-red-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+                <li class="relative"><span class="absolute left-0 w-5 h-5 bg-red-500 flex items-center justify-center rounded-full text-white text-[9px]"><i class="fa-solid fa-check"></i></span> <p class="ml-[26px] text-sm">Lorem ipsum dolor sit amet.</p></li>
+              </ul>
+              <a href="#" class="px-6 py-4 rounded-xl border inline-block w-full text-center my-4 font-semibold bg-blue-600 text-white">Buy Extended License</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </section>
+    <!-- start an eCommerce -->
+    <section>
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-10">
+          <div class="relative">
+            <img src="public/img/prefooter.jpg" alt="prefooter" class="min-h-[600px] object-cover object-center w-full">
+            <div class="text-center flex flex-col items-center justify-between absolute top-0 left-0 w-full h-full py-28">
+              
+              <div class="text-white font-bold max-w-[500px] space-y-4">
+                <h2 class="text-2xl sm:text-4xl">Ready to start an eCommerce Business!</h2>
+                <p class="text-xs sm:text-sm">Top-notch support, free lifetime updates and premium exclusive features are coming soon!</p>
+              </div>
+              
+              <a href="#" class="px-4 py-2 text-sm sm:px-8 sm:py-6 bg-blue-500 text-white rounded-full w-fit sm:text-lg font-bold hover:bg-blue-600 transition-colors duration-300">Download your copy now | $59</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- footer -->
+    <footer class="bg-black text-white">
+      <div class="2xl:container 2xl:mx-auto">
+        <div class="px-4 md:px-20 py-10">
+          <div class="grid grid-cols-12 gap-6">
+            <div class="col-span-12 md:col-span-3 space-y-8">
+              <div class="space-y-4">
+                <img src="public/img/Logo1.png" alt="logo" class="w-52">
+                <p>6Valley is a complete eCommerce CMS allowing you to manage your entire eCommerce ecosystem.</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <a href="#" class="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center text-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#099dcb] text-white flex items-center justify-center text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center text-lg"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center text-lg"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+              <div>
+                <a href="#" class="flex items-center gap-2 px-2 py-1 rounded-md bg-gray-800 w-fit">
+                  <img src="public/img/codecanyon.png" alt="codecanyon" class="w-12">
+                  <div>
+                    <h3 class="uppercase text-sm text-gray-400">Get it on</h3>
+                    <h2 class="text-xl font-bold">Codecanyon</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+  
+            <div class="col-span-12 md:col-span-3 text-xl space-y-4">
+              <h2 class="font-semibold">Company</h2>
+              <ul class="text-lg space-y-2">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Service & Support Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-span-12 md:col-span-3 text-xl space-y-4">
+              <h2 class="font-semibold">Quick Links</h2>
+              <ul class="text-lg space-y-2">
+                <li><a href="#">Demo</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="col-span-12 md:col-span-3 text-xl space-y-4">
+              <h2 class="font-semibold">Contact Us</h2>
+              <ul class="text-lg space-y-2">
+                <li><a href="#" class="flex items-center gap-2"><span><i class="fa-brands fa-whatsapp"></i></span><p>+8801325887797</p></a></li>
+                <li><a href="#" class="flex items-center gap-2"><span><i class="fa-regular fa-envelope"></i></span><p>support@6amtech.com</p></a></li>
+                <li><a href="#" class="px-4 py-2 rounded-md bg-blue-600 text-white inline-block font-bold hover:bg-blue-700 transition-colors duration-300">Support Ticket <i class="fa-solid fa-angle-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="src/main.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper1 = new Swiper(".swiper-carousel-one", {
+      // effect: "slide",
+      // grabCursor: true,
+      // centeredSlides: true,
+      slidesPerView: 1.5,
+      centeredSlides: true,
+      // loop:true,
+      spaceBetween:20,
+      // coverflowEffect: {
+      //   rotate: 0,
+      //   stretch: 0,
+      //   depth: 150,
+      //   modifier: 2.5,
+      //   slideShadows: true,
+      // },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      autoplay:{
+        delay:3000,
+        disableOnInteraction:false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        1024: {
+          slidesPerView: 1.5,
+        },
+      },
+    });
+
+    var swiper2 = new Swiper(".swiper-carousel-two", {
+      slidesPerView: 8,
+      grid: {
+        rows: 3,
+        fill: "row",
+      },
+      spaceBetween: 60,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+          grid: {
+            rows: 3,
+            fill: "row",
+          },
+        },
+        640: {
+          slidesPerView: 4,
+          grid: {
+            rows: 3,
+            fill: "row",
+          },
+        },
+        768: {
+          slidesPerView: 6,
+          grid: {
+            rows: 3,
+            fill: "row",
+          },
+        },
+        1024: {
+          slidesPerView: 8,
+          grid: {
+            rows: 3,
+            fill: "row",
+          },
+        },
+      },
+    });
+  </script>
+</html>
+
+
+
+
+
+
